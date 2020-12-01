@@ -51,6 +51,8 @@ public class Game extends AppCompatActivity {
 
     public static int score = 0;
 
+    public static String previousWord = " ";
+
     //issue: if txt file chosen is empty, app crashes.
 
 
@@ -76,14 +78,6 @@ public class Game extends AppCompatActivity {
 
 
 
-        /*
-        for (int i = 0; i < 5; i++)
-        {
-            words.add(" " + i);
-        }
-
-         */
-
 
         TextView word = (TextView) findViewById(R.id.textView);
         Button newWordButton = findViewById(R.id.newWordButton);
@@ -93,7 +87,7 @@ public class Game extends AppCompatActivity {
         Button pass = findViewById(R.id.passButton);
 
         updateWord(word);
-        
+
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +101,8 @@ public class Game extends AppCompatActivity {
             public void onClick(View v) {
                 updateWord(word);
                 incrementScore();
+                //https://developer.android.com/reference/java/util/ArrayList
+
 
             }
         });
@@ -136,6 +132,30 @@ public class Game extends AppCompatActivity {
     public void updateWord(TextView word){
         newNumber = getRandomNumber(words.size());
         word.setText(words.get(newNumber));
+
+        //variable to temporarily hold value of the new word,
+        //since we're getting rid of the previous word and then
+        //updating what the previous word is.
+        //This is to prevent issues with getting the wrong index, since if we
+        //just do previousWord = words.get(newNumber) after removing an element,
+        //newNumber's spot in the index will probably be a new word at that point.
+        String string = words.get(newNumber);
+        words.remove(previousWord);
+        previousWord = string;
+
+        //if we run out of words, we reload the text file into our words ArrayList
+        //Issue: something goes wonky when we go past 100; works fine before then.
+        //Issue: occasional repeats 2x in a row, like: 46, scissors, 47, scissors,
+        // aside from those repeats that happen only 2x in a row, not sure if other repeats
+        // happen.
+        if (words.size() < 2)
+        {
+            try {
+                readTextFile(inputStream);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 
@@ -179,5 +199,7 @@ public class Game extends AppCompatActivity {
         TextView scoreText = findViewById(R.id.scoreTextView);
         scoreText.setText("Score: " + score);
     }
+
+
 
 }
