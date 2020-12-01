@@ -74,6 +74,8 @@ public class Game extends AppCompatActivity {
         }
 
 
+
+
         /*
         for (int i = 0; i < 5; i++)
         {
@@ -90,6 +92,8 @@ public class Game extends AppCompatActivity {
         Button goBack = findViewById(R.id.goBackToScenarioSelectButton);
         Button pass = findViewById(R.id.passButton);
 
+        updateWord(word);
+        
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
