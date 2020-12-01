@@ -2,14 +2,13 @@ package com.example.scavengerhunt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -25,7 +24,7 @@ https://developer.android.com/reference/android/app/Activity
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class Game extends AppCompatActivity {
 
 
     //Because we need to count the number of words (elements) we have remaining,
@@ -47,18 +46,21 @@ public class MainActivity extends AppCompatActivity {
     InputStream inputStream;
 
 
+    //variable controlling which list we're working with.
+    String choice = "school.txt";
+
+    //issue: if txt file chosen is empty, app crashes.
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.game);
 
         //populate words ArrayList
-        //need to replace with words from file
         assetManager = getAssets();
         try {
-            inputStream = assetManager.open("test.txt");
+            inputStream = assetManager.open(choice);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -82,11 +84,25 @@ public class MainActivity extends AppCompatActivity {
         TextView word = (TextView) findViewById(R.id.textView);
         Button newWordButton = findViewById(R.id.newWordButton);
 
+        Button goBack = findViewById(R.id.goBackToScenarioSelectButton);
+
 
         newWordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateWord(word);
+            }
+        });
+
+
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //https://www.geeksforgeeks.org/android-creating-multiple-screen-app/
+                Intent intent = new Intent(Game.this, ScenarioSelection.class);
+
+                startActivity(intent);
             }
         });
 
