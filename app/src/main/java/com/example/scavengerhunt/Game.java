@@ -34,8 +34,6 @@ public class Game extends AppCompatActivity {
 
     //Variables for this class
 
-
-
     public ArrayList<String> words = new ArrayList<String>();
     int oldNumber = 0;
     int newNumber = 0;
