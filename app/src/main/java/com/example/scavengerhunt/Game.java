@@ -83,9 +83,17 @@ public class Game extends AppCompatActivity {
 
         TextView word = (TextView) findViewById(R.id.textView);
         Button newWordButton = findViewById(R.id.newWordButton);
+        Button finish = findViewById(R.id.finishButton);
 
         Button goBack = findViewById(R.id.goBackToScenarioSelectButton);
 
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Game.this, PostGame.class);
+                startActivity(intent);
+            }
+        });
 
         newWordButton.setOnClickListener(new View.OnClickListener() {
             @Override

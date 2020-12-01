@@ -18,6 +18,7 @@ public class ScenarioSelection extends AppCompatActivity {
         Button school = findViewById(R.id.schoolButton);
         Button home = findViewById(R.id.homeButton);
         Button outside = findViewById(R.id.outsideButton);
+        Button back = findViewById(R.id.goBackHomeButton);
 
 
         school.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +55,19 @@ public class ScenarioSelection extends AppCompatActivity {
 
                 Game.choice = "outside.txt";
                 Intent intent = new Intent(ScenarioSelection.this, Game.class);
+
+                startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //https://www.geeksforgeeks.org/android-creating-multiple-screen-app/
+
+                Game.choice = "outside.txt";
+                Intent intent = new Intent(ScenarioSelection.this, Home.class);
 
                 startActivity(intent);
             }
