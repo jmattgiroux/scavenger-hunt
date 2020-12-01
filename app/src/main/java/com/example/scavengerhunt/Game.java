@@ -49,6 +49,8 @@ public class Game extends AppCompatActivity {
     //variable controlling which list we're working with.
     public static String choice = "school.txt";
 
+    public static int score = 0;
+
     //issue: if txt file chosen is empty, app crashes.
 
 
@@ -86,6 +88,7 @@ public class Game extends AppCompatActivity {
         Button finish = findViewById(R.id.finishButton);
 
         Button goBack = findViewById(R.id.goBackToScenarioSelectButton);
+        Button pass = findViewById(R.id.passButton);
 
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +99,15 @@ public class Game extends AppCompatActivity {
         });
 
         newWordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateWord(word);
+                incrementScore();
+
+            }
+        });
+
+        pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateWord(word);
@@ -156,6 +168,12 @@ public class Game extends AppCompatActivity {
         bufferedReader.close();
 
         return;
+    }
+
+    public void incrementScore(){
+        score++;
+        TextView scoreText = findViewById(R.id.scoreTextView);
+        scoreText.setText("Score: " + score);
     }
 
 }

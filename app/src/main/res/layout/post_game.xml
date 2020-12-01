@@ -11,6 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Go Back to Home"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="484dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.755" />
+
+    <TextView
+        android:id="@+id/finalScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Final Score: "
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/goBackToStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
