@@ -47,7 +47,7 @@ public class Game extends AppCompatActivity {
 
 
     //variable controlling which list we're working with.
-    String choice = "school.txt";
+    public static String choice = "school.txt";
 
     //issue: if txt file chosen is empty, app crashes.
 

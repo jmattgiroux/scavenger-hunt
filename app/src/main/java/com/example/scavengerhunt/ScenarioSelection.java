@@ -24,6 +24,9 @@ public class ScenarioSelection extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //https://stackoverflow.com/questions/12288629/how-do-i-get-a-variable-in-another-activity
+                // Game.choice is a public static variable, hence we can change it from here.
+                Game.choice = "school.txt";
                 //https://www.geeksforgeeks.org/android-creating-multiple-screen-app/
                 Intent intent = new Intent(ScenarioSelection.this, Game.class);
 
@@ -35,6 +38,7 @@ public class ScenarioSelection extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Game.choice = "home.txt";
                 //https://www.geeksforgeeks.org/android-creating-multiple-screen-app/
                 Intent intent = new Intent(ScenarioSelection.this, Game.class);
 
@@ -47,6 +51,8 @@ public class ScenarioSelection extends AppCompatActivity {
             public void onClick(View v) {
 
                 //https://www.geeksforgeeks.org/android-creating-multiple-screen-app/
+
+                Game.choice = "outside.txt";
                 Intent intent = new Intent(ScenarioSelection.this, Game.class);
 
                 startActivity(intent);
