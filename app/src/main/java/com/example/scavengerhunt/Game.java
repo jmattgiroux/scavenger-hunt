@@ -35,7 +35,6 @@ public class Game extends AppCompatActivity {
     //Variables for this class
 
     public ArrayList<String> words = new ArrayList<String>();
-    int oldNumber = 0;
     int newNumber = 0;
 
     //I need to explain why the variables below are declared here and
@@ -138,22 +137,30 @@ public class Game extends AppCompatActivity {
         //just do previousWord = words.get(newNumber) after removing an element,
         //newNumber's spot in the index will probably be a new word at that point.
         String string = words.get(newNumber);
-        words.remove(previousWord);
-        previousWord = string;
 
         //if we run out of words, we reload the text file into our words ArrayList
-        //Issue: something goes wonky when we go past 100; works fine before then.
+        //Works for going over a hundred.
         //Issue: occasional repeats 2x in a row, like: 46, scissors, 47, scissors,
         // aside from those repeats that happen only 2x in a row, not sure if other repeats
         // happen.
-        if (words.size() < 2)
+        if (words.size() <= 1)
         {
+            //repopulate words ArrayList
+            assetManager = getAssets();
+            try {
+                inputStream = assetManager.open(choice);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
             try {
                 readTextFile(inputStream);
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
+        words.remove(string);
     }
 
 

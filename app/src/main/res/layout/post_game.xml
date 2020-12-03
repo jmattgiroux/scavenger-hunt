@@ -4,25 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/navy"
     tools:context=".PostGame">
 
     <Button
         android:id="@+id/goBackToStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go Back to Home"
+        android:layout_width="330dp"
+        android:layout_height="139dp"
+        android:text="Return to Home"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:backgroundTint="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.972" />
 
     <TextView
         android:id="@+id/finalScoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Final Score: "
-        android:textSize="36sp"
+        android:textColor="@color/white"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/goBackToStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
