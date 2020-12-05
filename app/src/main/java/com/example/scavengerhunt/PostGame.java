@@ -17,7 +17,7 @@ public class PostGame extends AppCompatActivity {
 
         TextView finalScore = findViewById(R.id.finalScoreText);
 
-        finalScore.setText("Final Score: " + Game.score);
+        finalScore.setText(Game.score + "");
 
         Button restart = findViewById(R.id.goBackToStart);
 
