@@ -1,14 +1,14 @@
 # Scavenger-Hunt
 
 
-Program Description: 
+### Program Description: 
 
 This program is a Scavenger Hunt game that generates objects for the player to find. The player can choose which environment the objects are generated for (for example, School) so that the objects generated are more likely to be in the player's vicinity.
 
 This game keeps score of the objects the player finds, and there is no known upper limit to the points the player can earn.
 
 
-Screenshots:
+### Screenshots:
 
 - Final Design of Scavenger Hunt Application, game screen.
 
@@ -26,11 +26,11 @@ Screenshots:
 
 Project Plan Document: https://drive.google.com/file/d/1AZamZZdtZesQSDiQNKk-OPkwCMsLyOcn/view?usp=sharing
 
-Learning Resources: 
+### Learning Resources: 
 	https://developer.android.com/studio/run/emulator - Guide to using Android Virtual Device emulators.
 	https://developer.android.com/guide - Great source for Android Studio tutorials and documentation.
 
-Environment first time setup:
+### Environment first time setup:
 
     1. Install software listed under "Development Environment Requirements" in this README file
 	
@@ -45,7 +45,7 @@ Environment first time setup:
     4. Complete Collaboration tests in References/EnvironmentSetup/ 
 
 
-Environment Setup Cycle:
+### Environment Setup Cycle:
 
     1. Pull from main branch through Git
 	
@@ -79,14 +79,14 @@ Environment Setup Cycle:
 
     12. Confirm with Team lead, then push to Main.
 
-Development Environment Requirements:
-Hardware Capabilities:
+### Development Environment Requirements:
+#### Hardware Capabilities:
 
     8 gb ram recommended (for running the Android Virtual Device emulator)
 
     20 gb storage disk space recommended (1 Android Virtual Device alone can take up almost 10 gb of storage space)
 
-Software Installed:
+#### Software Installed:
 
     git version 2.25.1 or later
 
