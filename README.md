@@ -3,14 +3,24 @@
 
 Program Description: 
 
+This program is a Scavenger Hunt game that generates objects for the player to find. The player can choose which environment the objects are generated for (for example, School) so that the objects generated are more likely to be in the player's vicinity.
+
+This game keeps score of the objects the player finds, and there is no known upper limit to the points the player can earn.
+
 
 Screenshots:
 
+- Final Design of Scavenger Hunt Application, game screen.
+
 ![ScreenShot 1](https://github.com/jmattgiroux/scavenger-hunt/blob/master/Screenshot1.png)
+
+- Final Design of Scavenger Hunt Application, final screen.
 
 ![Screenshot 2](https://github.com/jmattgiroux/scavenger-hunt/blob/master/Screenshot2.png)
 
+- Gif of app's functionality before design changes were implemented. The functionality of the application is virtually the same, aside from bugs that were fixed, and the current design from above has been applied to all 4 screens of the application, which are shown in the Gif below
 
+![Gif of application before design changes](https://github.com/jmattgiroux/scavenger-hunt/blob/master/application.gif)
 
 
 
