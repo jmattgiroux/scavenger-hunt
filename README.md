@@ -4,11 +4,11 @@
 Program Description: 
 
 
-Screenshots:\
+Screenshots:
 
-![ScreenShot 1]()
+![ScreenShot 1](https://github.com/jmattgiroux/scavenger-hunt/blob/master/Screenshot1.png)
 
-![Screenshot 2]()
+![Screenshot 2](https://github.com/jmattgiroux/scavenger-hunt/blob/master/Screenshot2.png)
 
 
 
