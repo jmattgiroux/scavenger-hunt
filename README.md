@@ -24,7 +24,7 @@ This game keeps score of the objects the player finds, and there is no known upp
 
 
 
-Project Plan Document: https://drive.google.com/file/d/1AZamZZdtZesQSDiQNKk-OPkwCMsLyOcn/view?usp=sharing
+### Project Plan Document: https://drive.google.com/file/d/1AZamZZdtZesQSDiQNKk-OPkwCMsLyOcn/view?usp=sharing
 
 ### Learning Resources: 
 	https://developer.android.com/studio/run/emulator - Guide to using Android Virtual Device emulators.
